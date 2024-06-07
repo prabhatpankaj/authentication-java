@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: authentication
+  datasource:
+    url: ${MYSQL_HOST:jdbc:mysql://localhost:3306/authentication}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  port: 8082
+
+security:
+  jwt:
+    secret-key: HNMFqqeuUIBk1eW8aUCRF0ejnPnQQekq
+    issuer: Book Store API
+
+
+
+
+
