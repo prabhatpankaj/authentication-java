@@ -251,6 +251,266 @@
 					"body": "{\n    \"user\": {\n        \"id\": 5,\n        \"firstName\": \"prabhat\",\n        \"lastName\": \"pankaj\",\n        \"username\": \"pankaj\",\n        \"email\": \"prabhatiitbhu@gmail.com\",\n        \"phone\": \"9999999999\",\n        \"address\": \"sector 121\",\n        \"password\": \"$2a$10$mFcluIAjtuNYEfN1TQR/iOm7ZoPUHQFkFx/Q6ah9gw6OfEqH/VmDK\",\n        \"role\": \"client\",\n        \"createdAt\": \"2024-07-28T11:12:34.889+00:00\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE1NTUsImlhdCI6MTcyMjE2NTE1NX0.Gy0QS7O354q8Kj6doMCsRaUY3HaXuac8W3rOL4U7Y1g\"\n}"
 				}
 			]
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/home",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE2NTMsImlhdCI6MTcyMjE2NTI1M30.jFk62awA_wZbEcHHRTtHWsBndw4PwShjUWhZPK4eFws",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/admin/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"admin",
+						"home"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "admin/home",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE2NTMsImlhdCI6MTcyMjE2NTI1M30.jFk62awA_wZbEcHHRTtHWsBndw4PwShjUWhZPK4eFws",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/admin/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"admin",
+								"home"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 11:18:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Admin Home Page"
+				}
+			]
+		},
+		{
+			"name": "client/home",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE2NTMsImlhdCI6MTcyMjE2NTI1M30.jFk62awA_wZbEcHHRTtHWsBndw4PwShjUWhZPK4eFws",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/client/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"client",
+						"home"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "client/home",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE2NTMsImlhdCI6MTcyMjE2NTI1M30.jFk62awA_wZbEcHHRTtHWsBndw4PwShjUWhZPK4eFws",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/client/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"client",
+								"home"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 11:19:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Cleint Home Page"
+				}
+			]
 		}
 	]
 }
