@@ -67,16 +67,7 @@ public class AccountController {
             return ResponseEntity.badRequest().body(errorsMap);
         }
 
-        var bCryptEncoder = new BCryptPasswordEncoder();
-
-        AppUser appUser = new AppUser();
-        appUser.setFirstName(registerDto.getFirstName());
-        appUser.setLastName(registerDto.getLastName());
-        appUser.setUsername(registerDto.getUsername());
-        appUser.setEmail(registerDto.getEmail());
-        appUser.setRole("client");
-        appUser.setCreatedAt(new Date());
-        appUser.setPassword(bCryptEncoder.encode(registerDto.getPassword()));
+        AppUser appUser = getAppUser(registerDto);
 
         try {
             var otherUser = appUserRepository.findByUsername(registerDto.getUsername());
@@ -88,6 +79,7 @@ public class AccountController {
                 return ResponseEntity.badRequest().body("Email already in use");
             }
 
+            System.out.println(appUser+"appUser");
             appUserRepository.save(appUser);
 
             String jwtToken = createJwtToken(appUser);
@@ -103,6 +95,22 @@ public class AccountController {
         }
 
         return ResponseEntity.badRequest().body("Error");
+    }
+
+    private AppUser getAppUser(RegisterDto registerDto) {
+        var bCryptEncoder = new BCryptPasswordEncoder();
+
+        AppUser appUser = new AppUser();
+        appUser.setFirstName(registerDto.getFirstName());
+        appUser.setLastName(registerDto.getLastName());
+        appUser.setUsername(registerDto.getUsername());
+        appUser.setEmail(registerDto.getEmail());
+        appUser.setPhone(registerDto.getPhone());
+        appUser.setRole("client");
+        appUser.setCreatedAt(new Date());
+        appUser.setAddress(registerDto.getAddress());
+        appUser.setPassword(bCryptEncoder.encode(registerDto.getPassword()));
+        return appUser;
     }
 
     @PostMapping("/login")

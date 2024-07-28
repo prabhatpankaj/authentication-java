@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "ee6b2377-7f82-4915-875f-7a2a31b56064",
+		"name": "AUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5741071"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"pankaj\",\n    \"password\": \"pass1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/account/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"pankaj\",\n    \"password\": \"pass1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/account/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"account",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 11:14:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 5,\n        \"firstName\": \"prabhat\",\n        \"lastName\": \"pankaj\",\n        \"username\": \"pankaj\",\n        \"email\": \"prabhatiitbhu@gmail.com\",\n        \"phone\": \"9999999999\",\n        \"address\": \"sector 121\",\n        \"password\": \"$2a$10$mFcluIAjtuNYEfN1TQR/iOm7ZoPUHQFkFx/Q6ah9gw6OfEqH/VmDK\",\n        \"role\": \"client\",\n        \"createdAt\": \"2024-07-28T11:12:34.889+00:00\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE2NTMsImlhdCI6MTcyMjE2NTI1M30.jFk62awA_wZbEcHHRTtHWsBndw4PwShjUWhZPK4eFws\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1MDEwNjI2NiwiaWF0IjoxNjUwMDE5ODY2LCJqdGkiOiJhMzQyMzg0ZGIxNjQ0YTIyYTdiNDlhOTE3ZDQyZDJhMSIsInVzZXJfaWQiOiI1YWI5YTNhMy0xNTc2LTRiYmEtYmIyZS1hMTUwMmJiZjQ0YmYifQ.HecQt5X6VQ_N7mrgcko0R4eEn9xRAfGdXdPMjts7icU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apidev.redcliffelabs.com/api/v1/auth/token-refresh/",
+					"protocol": "https",
+					"host": [
+						"apidev",
+						"redcliffelabs",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"token-refresh",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Refresh Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"prabhat\",\n    \"lastName\": \"pankaj\",\n    \"username\": \"pankaj\",\n    \"password\": \"pass1234\",\n    \"email\": \"prabhatiitbhu@gmail.com\",\n    \"phone\": \"9999999999\",\n    \"address\": \"sector 121\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/account/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"account",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 11:12:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 5,\n        \"firstName\": \"prabhat\",\n        \"lastName\": \"pankaj\",\n        \"username\": \"pankaj\",\n        \"email\": \"prabhatiitbhu@gmail.com\",\n        \"phone\": \"9999999999\",\n        \"address\": \"sector 121\",\n        \"password\": \"$2a$10$mFcluIAjtuNYEfN1TQR/iOm7ZoPUHQFkFx/Q6ah9gw6OfEqH/VmDK\",\n        \"role\": \"client\",\n        \"createdAt\": \"2024-07-28T11:12:34.889+00:00\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCb29rIFN0b3JlIEFQSSIsInN1YiI6InBhbmthaiIsInJvbGUiOiJjbGllbnQiLCJleHAiOjE3MjIyNTE1NTUsImlhdCI6MTcyMjE2NTE1NX0.Gy0QS7O354q8Kj6doMCsRaUY3HaXuac8W3rOL4U7Y1g\"\n}"
+				}
+			]
+		}
+	]
+}
